@@ -1,16 +1,85 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawerLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.lixiang.smallmall.MainActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
-</RelativeLayout>
+    <!--内容区域-->
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ListView
+            android:id="@+id/listView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"></ListView>
+
+    </RelativeLayout>
+
+    <!--导航区域:android:layout_gravity控制抽屉的位置left or right (or start/end)-->
+    <LinearLayout
+        android:id="@+id/navigation"
+        android:layout_width="200dp"
+        android:layout_height="match_parent"
+        android:layout_gravity="left"
+        android:background="#303030"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btn_login"
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:drawableTop="@mipmap/ic_launcher"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:text="未登陆" />
+
+        <Button
+            android:id="@+id/btn_shouye"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:layout_marginTop="30dp"
+            android:gravity="left"
+            android:text="首页" />
+
+        <Button
+            android:id="@+id/btn_shoucang"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_marginLeft="10dp"
+            android:textColor="#ffffff"
+            android:gravity="left"
+            android:text="收藏" />
+
+        <Button
+            android:id="@+id/btn_gouwuche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:textColor="#ffffff"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="购物车" />
+
+        <Button
+            android:id="@+id/btn_tuichu"
+            android:layout_width="match_parent"
+            android:textColor="#ffffff"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_marginLeft="10dp"
+            android:gravity="left"
+            android:text="退出登录" />
+    </LinearLayout>
+
+</android.support.v4.widget.DrawerLayout>
