@@ -1,5 +1,6 @@
 package com.lixiang.smallmall.Bean;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -54,7 +55,7 @@ public class ShouYeInfo {
 
                 private String title;
 
-                private List<ItemsBean2> items;
+                private ArrayList<ItemsBean2> items;
 
                 public String getTitle() {
                     return title;
@@ -64,11 +65,11 @@ public class ShouYeInfo {
                     this.title = title;
                 }
 
-                public List<ItemsBean2> getItems() {
+                public ArrayList<ItemsBean2> getItems() {
                     return items;
                 }
 
-                public void setItems(List<ItemsBean2> items) {
+                public void setItems(ArrayList<ItemsBean2> items) {
                     this.items = items;
                 }
 
