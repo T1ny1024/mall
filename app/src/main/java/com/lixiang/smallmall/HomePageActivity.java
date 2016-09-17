@@ -39,6 +39,7 @@ public class HomePageActivity extends AppCompatActivity {
     private String[] title;
     private DrawerLayout drawerLayout;
     private Button btn;
+    private Button btnTuiChu;
     public static final String URL="http://api-v2.mall.hichao.com/category/list?ga=%2Fcategory%2Flist";
     private ArrayList<LinkedHashMap<String,ArrayList<ShouYeInfo.DataBean.ItemsBean.ComponentBean.ItemsBean2>>> gradViewData;
     LinkedHashMap<String, ArrayList<ShouYeInfo.DataBean.ItemsBean.ComponentBean.ItemsBean2>> stringArrayListLinkedHashMap=
@@ -52,7 +53,8 @@ public class HomePageActivity extends AppCompatActivity {
         lvLeftTitle= (ListView) findViewById(R.id.lv_left_title);
         gridView= (GridView) findViewById(R.id.gv_right);
         btn = (Button) findViewById(R.id.btn_shouye);
-         drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
+        btnTuiChu= (Button) findViewById(R.id.btn_tuichu);
+        drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
                 ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -62,7 +64,14 @@ public class HomePageActivity extends AppCompatActivity {
         //重要:同步ActionBar上抽屉开关不同状态
         toggle.syncState();
 
-
+        btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+            Intent intent=new Intent();
+                intent.setClass(HomePageActivity.this,LoginActivity.class);
+                startActivity(intent);
+            }
+        });
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
