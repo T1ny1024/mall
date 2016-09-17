@@ -62,8 +62,8 @@ public class GradViewListDetailsAdapter extends BaseAdapter {
         Picasso.with(context).load(items.get(position).getComponent().getPicUrl()).into(viewHolder.imageView);
         viewHolder.tvTitle.setText(items.get(position).getComponent().getDescription());
         viewHolder.tvNowPrice.setText(items.get(position).getComponent().getPrice());
-        viewHolder.tvPrice.setText(items.get(position).getComponent().getOrigin_price());
-        viewHolder.tvSale.setText(items.get(position).getComponent().getSales());
+        viewHolder.tvPrice.setText("原价"+items.get(position).getComponent().getOrigin_price());
+        viewHolder.tvSale.setText("销量"+items.get(position).getComponent().getSales());
         return convertView;
     }
     class ViewHolder{

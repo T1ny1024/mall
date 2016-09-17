@@ -8,7 +8,64 @@
         android:id="@+id/relativeLayout"
         android:layout_alignParentBottom="true"
         android:layout_width="match_parent"
-        android:layout_height="60dp"></RelativeLayout>
+        android:gravity="center_vertical"
+        android:background="#303030"
+        android:layout_height="50dp">
+        <FrameLayout
+            android:id="@+id/fl_collect"
+            android:layout_width="120dp"
+            android:layout_height="match_parent">
+            <Button
+                android:id="@+id/collect"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:background="#5b5959"
+                android:text="加入收藏"/>
+        </FrameLayout>
+        <FrameLayout
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_alignParentRight="true"
+            android:id="@+id/fl_buy">
+            <Button
+                android:id="@+id/buy"
+                android:textColor="#ffffff"
+                android:background="#5b5959"
+                android:layout_margin="10dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="立即购买"/>
+        </FrameLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/fl_add"
+            android:layout_width="120dp"
+            android:layout_height="match_parent"
+            android:layout_toLeftOf="@+id/fl_buy"
+            android:layout_marginRight="10dp" >
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="#ffffff"
+                android:layout_margin="10dp"
+                android:background="#5b5959"
+                android:text="加入购物车" />
+            <TextView
+                android:id="@+id/dot"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/dot_shape"/>
+
+
+        </RelativeLayout>
+
+    </RelativeLayout>
     <WebView
         android:layout_above="@id/relativeLayout"
         android:id="@+id/wv_details"

@@ -12,24 +12,34 @@
     <TextView
         android:id="@+id/tv_title_listdetails"
         android:layout_width="wrap_content"
+        android:layout_margin="4dp"
+        android:textSize="14sp"
+        android:textColor="#cfcdcd"
         android:layout_height="wrap_content" />
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_nowprice_listdetails"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:textSize="15sp"
             android:textColor="#da0e0e"/>
         <TextView
             android:id="@+id/tv_price_listdetails"
+            android:layout_toRightOf="@id/tv_nowprice_listdetails"
             android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:textColor="#cfcdcd"
+            android:textSize="13dp"
             android:layout_height="wrap_content" />
         <TextView
             android:id="@+id/tv_sales_listdetails"
             android:layout_width="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#cfcdcd"
+            android:textSize="13dp"
             android:layout_height="wrap_content" />
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>

@@ -8,13 +8,17 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.KeyEvent;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.GridView;
 import android.widget.ListView;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.lixiang.smallmall.Adapter.GradViewAdapter;
 import com.lixiang.smallmall.Bean.ShouYeInfo;
@@ -35,7 +39,6 @@ public class HomePageActivity extends AppCompatActivity {
     private String[] title;
     private DrawerLayout drawerLayout;
     private Button btn;
-    private ListView listView;
     public static final String URL="http://api-v2.mall.hichao.com/category/list?ga=%2Fcategory%2Flist";
     private ArrayList<LinkedHashMap<String,ArrayList<ShouYeInfo.DataBean.ItemsBean.ComponentBean.ItemsBean2>>> gradViewData;
     LinkedHashMap<String, ArrayList<ShouYeInfo.DataBean.ItemsBean.ComponentBean.ItemsBean2>> stringArrayListLinkedHashMap=
@@ -52,8 +55,8 @@ public class HomePageActivity extends AppCompatActivity {
          drawerLayout = (DrawerLayout) findViewById(R.id.drawerLayout);
         ActionBar actionBar = getSupportActionBar();
         actionBar.setDisplayHomeAsUpEnabled(true);
-        ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this,drawerLayout,R.string.open,R.string.close);
+                ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
+                        this, drawerLayout, R.string.open, R.string.close);
         //设置抽屉监听
         drawerLayout.setDrawerListener(toggle);
         //重要:同步ActionBar上抽屉开关不同状态
@@ -138,6 +141,9 @@ public class HomePageActivity extends AppCompatActivity {
                     drawerLayout.openDrawer(Gravity.LEFT);
                 }
                 break;
+//            case R.id.iv_share:
+//                Toast.makeText(HomePageActivity.this, "aaaaaaaaa", Toast.LENGTH_SHORT).show();
+//                break;
         }
         return super.onOptionsItemSelected(item);
     }
