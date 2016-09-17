@@ -38,6 +38,7 @@ public class DetailsActivity extends AppCompatActivity {
                 SharedPreferences num = getSharedPreferences("buyCar", MODE_PRIVATE);
                 int count = num.getInt("num",0);
                 tvDot.setText(count+1);
+
             }
         });
     }
